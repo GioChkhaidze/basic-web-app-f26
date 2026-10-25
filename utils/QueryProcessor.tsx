@@ -8,7 +8,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("name")) {
-    return "Eduardo";
+    return "gchkhaid";
   }
 
   if (query.toLowerCase().includes("age")) {
@@ -18,6 +18,8 @@ export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("andrew id")) {
     return "gchkhaid";
   }
+
+
 
   
 
