@@ -24,5 +24,11 @@ export default function QueryProcessor(query: string): string {
     return (parseInt(plusMatch[1]) + parseInt(plusMatch[2])).toString();
   }
 
+  const largestMatch = query.match(/which of the following numbers is the largest:\s*([-\d,\s]+)/i);
+  if (largestMatch) {
+    const numbers = largestMatch[1].split(",").map((n) => parseInt(n.trim()));
+    return Math.max(...numbers).toString();
+  }
+
   return "";
 }
