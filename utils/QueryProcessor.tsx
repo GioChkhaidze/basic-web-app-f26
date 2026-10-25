@@ -19,14 +19,10 @@ export default function QueryProcessor(query: string): string {
     return "gchkhaid";
   }
 
-  if (query.toLowerCase().includes(" 71 plus 15")) {
-    return "86";
+  const plusMatch = query.match(/what is (-?\d+) plus (-?\d+)/i);
+  if (plusMatch) {
+    return (parseInt(plusMatch[1]) + parseInt(plusMatch[2])).toString();
   }
-
-
-  
-
-
 
   return "";
 }

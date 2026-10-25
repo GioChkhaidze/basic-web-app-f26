@@ -31,4 +31,11 @@ describe("QueryProcessor", () => {
         const response: string = QueryProcessor(query);
         expect(response).toBe("gchkhaid");
     });
+
+    test('should add two numbers', () => {
+        expect(QueryProcessor("What is 38 plus 23?")).toBe("61");
+        expect(QueryProcessor("What is 58 plus 39?")).toBe("97");
+        expect(QueryProcessor("What is 9 plus 51?")).toBe("60");
+        expect(QueryProcessor("What is 71 plus 15?")).toBe("86");
+    });
 });
